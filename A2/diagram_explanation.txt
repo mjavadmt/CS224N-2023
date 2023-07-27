@@ -1,0 +1,13 @@
+as we see our Word2Vec model captures some similarities well and doesnt recognize others well.
+
+for example "man, women, female" appeared next to each other which is good. but "male" is not even close to them.
+or adjectives with same semantics are together like "amazing, wonderful, great" which means our model learned the 
+meaning of these adjs well but just next to them there is opposite of them such as "boring".
+"king" and "queen" should be closer. "snow" and "rain" approximately happened close to each other which is good.
+"queen" doesnt have something to do with "dumb" but they are close which our model doesnt perform well on this.
+
+all in all it depends on our context that our model learned these semantics and similarities. for example it may be for the reason of happening together so much that our model captured "queen" and dumb "together". or for our context 
+our "queen" made bad decision such that she could be "dumb".
+or "tea" and "coffee" are next to each other which is completely comprehensible and our context used them next to each other which our model learned these two are proabably have same somethat close vecotr space.
+
+because Word2Vec model doesnt look at the global characterstic of words and how much a word happens to other word in same context these are the result. I mean that Word2Vec only sees what are the word in the limted window of our center word and assign more proabability to words which are in the same window
